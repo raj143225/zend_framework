@@ -39,7 +39,7 @@ Doc­Block Structure:
  * @param <datatype> $varname <­­ contextual meaning of argument here ­­> 
  * 
  * @return <­­ return value datatype ­­>   
- */  
+*/  
 public function doSomething($arg1, $arg2, ..) {   
     ...   
     return $value;  
