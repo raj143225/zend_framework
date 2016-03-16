@@ -23,6 +23,6 @@
 * Zend Framework 1.12
 
  
- PM System Used:
-* JIRA (https://rapidfunnel.atlassian.net)
-* GIT (https://bitbucket.org/rapidfunnel/web-application)
+ ##PM System Used:
+* [JIRA] (https://rapidfunnel.atlassian.net)
+* [GIT] (https://bitbucket.org/rapidfunnel/web-application)
