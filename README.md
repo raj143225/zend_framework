@@ -1,6 +1,4 @@
-===========================
- #Developer Environment Setup:
-===========================
+#Developer Environment Setup:
 
 ##Project SetUP
 ---------------------------
