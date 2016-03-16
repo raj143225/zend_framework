@@ -20,7 +20,7 @@
 		ErrorDocument 404 /system/resource/error
 
     SetEnv ENVIRONMENT [Environment]  
-    php_value include_path ".;C:/xampp/php/zendframework/1.12.0;C:/xampp/php/PEAR"
+    **php_value include_path**: ".;C:/xampp/php/zendframework/1.12.0;C:/xampp/php/PEAR"
 
 
 ##Database SetUP:
