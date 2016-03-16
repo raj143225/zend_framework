@@ -1,41 +1,37 @@
-#### Production ########
-*/15 * * * * php /var/www/my.rapidfunnel.com/public/cron/mailSendUser.php Production
-*/15 * * * * php /var/www/my.rapidfunnel.com/public/cron/mailSendCampaign.php Production
-*/15 * * * * php /var/www/my.rapidfunnel.com/public/cron/mailLogMailgun.php Production
+#Tools and Plugins for Development
 
-1 0 * * * php /var/www/my.rapidfunnel.com/public/cron/accountIncentive.php Production
-35 0 * * * php /var/www/my.rapidfunnel.com/public/cron/accountPayment.php Production
-5 1 * * * php /var/www/my.rapidfunnel.com/public/cron/accountPrePayNotification.php Production
-1 2 * * * php /var/www/my.rapidfunnel.com/public/cron/accountUserPayment.php Production
-Remove cron for accountUserPrePayNotification
-1 3 * * * php /var/www/my.rapidfunnel.com/public/cron/accountUserPrePayNotification.php Production
-0 2 * * * php /var/www/my.rapidfunnel.com/public/cron/accountUserStatusUpdate.php Production
+**IDE**: PhpStorm 10.0.1
 
+**OS**: Ubuntu 14.04 LTS
 
+##Plugins:
 
-#### QA #######
-*/10 * * * * php /var/www/qa1.rapidfunnel.com/public/cron/mailSendUser.php QA
-*/10 * * * * php /var/www/qa1.rapidfunnel.com/public/cron/mailSendCampaign.php QA
-*/10 * * * * php /var/www/qa1.rapidfunnel.com/public/cron/mailLogMailgun.php QA
+####1.CodeSniffer:
 
-1 4 * * * php /var/www/qa1.rapidfunnel.com/public/cron/accountIncentive.php QA
-15 4 * * * php /var/www/qa1.rapidfunnel.com/public/cron/accountPayment.php QA
-25 4 * * * php /var/www/qa1.rapidfunnel.com/public/cron/accountPrePayNotification.php QA
-45 4 * * * php /var/www/qa1.rapidfunnel.com/public/cron/accountUserPayment.php QA
-Remove cron for accountUserPrePayNotification
-0 5 * * * php /var/www/qa1.rapidfunnel.com/public/cron/accountUserPrePayNotification.php QA
-0 2 * * * php /var/www/qa1.rapidfunnel.com/public/cron/accountUserStatusUpdate.php QA
+ **Install CodeSniffer**:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~$ sudo pear install PHP_CodeSniffer  
+ 
+  **Configuration with IDE**:  
+  ![](/img/ConfiguringCS1.png)  
+  **Inspection configuration in IDE**:
+  
+  ![](/img/ConfiguringCS2.png)
+  
+  **Ex**:  
+  **How it shows warning during development**:  
+  ![](/img/CSErrorDisplay.png)
+  
+####2.MessDetector:
 
-
-#### Staging ######
-*/10 * * * * php /var/www/s1.rapidfunnel.com/public/cron/mailSendUser.php Staging
-*/10 * * * * php /var/www/s1.rapidfunnel.com/public/cron/mailSendCampaign.php Staging
-*/10 * * * * php /var/www/s1.rapidfunnel.com/public/cron/mailLogMailgun.php Staging
-
-1 4 * * * php /var/www/s1.rapidfunnel.com/public/cron/accountIncentive.php Staging
-10 4 * * * php /var/www/s1.rapidfunnel.com/public/cron/accountPayment.php Staging
-[4:34:32 PM] rajanikant beero: 25 4 * * * php /var/www/s1.rapidfunnel.com/public/cron/accountPrePayNotification.php Staging
-45 4 * * * php /var/www/s1.rapidfunnel.com/public/cron/accountUserPayment.php Staging
-Remove cron for accountUserPrePayNotification
-0 5 * * * php /var/www/s1.rapidfunnel.com/public/cron/accountUserPrePayNotification.php Staging
-0 2 * * * php /var/www/s1.rapidfunnel.com/public/cron/accountUserStatusUpdate.php Staging
+  **Install MessDetector**:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://phpmd.org/download/index.html  
+  
+  **Configure with IDE**:  
+  ![](/img/ConfiguringMD1.png)  
+  
+  **Inspection configuration in IDE**:  
+  ![](/img/ConfiguringMD2.png) 
+  
+  **Ex**:  
+  **How it shows warning during development**:  
+  ![](/img/MDErrorDisplay.png))
+  
+  **Installation and configuration**:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://www.jetbrains.com/phpstorm/help/configuring-xdebug.html
