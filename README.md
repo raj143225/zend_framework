@@ -32,6 +32,6 @@
   
   **Ex**:  
   **How it shows warning during development**:  
-  ![](/img/MDErrorDisplay.png))
+  ![](/img/MDErrorDisplay.png)
   
   **Installation and configuration**:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://www.jetbrains.com/phpstorm/help/configuring-xdebug.html
