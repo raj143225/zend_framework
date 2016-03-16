@@ -18,11 +18,11 @@
 
  
 ##Software Versions:
-	* PHP 5.4
-	* Mysql 5.6
-	* Zend Framework 1.12
+* PHP 5.4
+* Mysql 5.6
+* Zend Framework 1.12
 
  
 ##PM System Used:
-	* [JIRA] (https://rapidfunnel.atlassian.net)
-	* [GIT] (https://bitbucket.org/rapidfunnel/web-application)
+* [JIRA] (https://rapidfunnel.atlassian.net)
+* [GIT] (https://bitbucket.org/rapidfunnel/web-application)
