@@ -73,4 +73,62 @@ public function doSomething($arg1, $arg2, ..) {
  * @returns array List of resulting entities
  */
 public function findEntities($searchTerm, $searchField, $params) {
+    ...
+```
+#Validation of method arguments 
+The methods on the model classes should all verify the argument supplied to them in order to 
+minimise the effects of runtime errors associated with the argument variables. This is particularly 
+important in the methods that communicate with the database where implicit datatype 
+conversion is likely to occur at the database server which can cause data loss or corruption. An 
+example where such conversion would be particularly harmful is the manipulation of date strings 
+which if invalid would not raise errors but will be converted and processed by the database 
+silently. 
+ 
+A reasonable implementation of the methods would confirm that the supplied arguments are not 
+null, are of the appropriate data types and in the cases of compound variables (arrays or 
+objects), they have the necessary structure for the needs of the method. In case of a problem, 
+the method should raise an exception which should be caught by the controller at a higher level. 
+During validation, focus should be given on simple checks that are consistent across methods in 
+a way that does not significantly increase the complexity of the method code. Checks should 
+prevent the raising of runtime errors, i.e. due to non­existent array key being accessed and for 
+complex data members (e.g. email address, date string, etc) external validators should be used 
+whenever possible. 
+ 
+Due to the **proximity** of the models to the database itself it is important to ensure that they 
+provide their own validation and handle invalid inputs robustly, regardless of any validation that 
+might have been carried out in the application controllers or front end. Concentrating the 
+validation in the model classes ensures that the robustness of the application can be tested in a 
+well controlled environment via unit tests. Due to the close coupling of the Controller classes to 
+the actual application View (HTML), unit testing for them in inherently more complex than for the 
+Models. 
+ 
+#For an example consider the beginning of a fictional class method: 
+ 
+ ```php 
+public function findEntities($searchTerm, $searchField, $params) { 
+ 
+    // assuming no empty queries are allowed 
+    if (!is_string($searchTerm) || empty($searchTerm)) { 
+        // exceptions should provide reasonable/descriptive messages 
+        throw new Exception('No empty queries allowed.'); 
+    } 
+ 
+    // a search query should be directed at a field 
+    if (!is_string($searchField) || empty($searchField)) { 
+        // exceptions should provide reasonable/descriptive messages 
+        throw new Exception('No field for query specified.'); 
+    } 
+     // ensure that $params is an array  
+    if (!is_array($params)) { 
+        // exceptions should provide reasonable/descriptive messages 
+        throw new Exception('Invalid $params argument supplied.'); 
+    } 
+ 
+    // ensure that $params contains appropriate keys 
+    if (!array_key_exists('order', $params)) { 
+        // exceptions should provide reasonable/descriptive messages 
+        throw new Exception('No orderBy key supplied to $params argument.'); 
+    } 
+   
+    ... 
 ```
