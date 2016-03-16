@@ -6,7 +6,7 @@
 
 ##Plugins:
 
-###1.CodeSniffer:
+####1.CodeSniffer:
 
 **Installation**: ~$ sudo pear install PHP_CodeSniffer
 
