@@ -1,6 +1,6 @@
 #RapidFunnel Coding Specification Update
 
-#1.Documenting using PHP doc­blocks 
+##1.Documenting using PHP doc­blocks 
 Doc­blocks are multi­line comments that precede the definition of classes, attribute variables 
 and methods using an uniform pre­defined format. Their purpose is to provide a succinct 
 indication of the significance of the object (and implementation where relevant). They should be 
@@ -24,6 +24,23 @@ use the doc­block to describe the internal structure of these variables as othe
 the method complexity and can slow down significantly the development process using the 
 method in question.  
  
- 
-Reference: ​
+**Reference:**
 http://www.phpdoc.org/docs/latest/references/phpdoc/index.html 
+
+Doc­Block Structure: 
+/** 
+ * <­­ one line description of method goes here ­­> 
+ *  
+ * <­­ functional description of the method goes here ­­> 
+ * 
+ * @param <datatype> $varname <­­ contextual meaning of argument here ­­> 
+ * ... 
+ * ... 
+ * @param <datatype> $varname <­­ contextual meaning of argument here ­­> 
+ * 
+ * @return <­­ return value datatype ­­> 
+ */ 
+public function doSomething($arg1, $arg2, ..) { 
+    ... 
+    return $value; 
+} 
