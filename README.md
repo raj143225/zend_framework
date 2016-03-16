@@ -8,6 +8,6 @@
 
 ####1.CodeSniffer:
 
-**Installation**: ~$ sudo pear install PHP_CodeSniffer
+***Installation***: ~$ sudo pear install PHP_CodeSniffer
 
 **Configuration with IDE**:-
