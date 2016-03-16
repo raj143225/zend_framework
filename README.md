@@ -6,7 +6,7 @@
 * Following code needs to be in the virtual setting,
 	1. For allowing few files access directly
 	2. Set the environment(Development | Testing | Production)
-	3. Need to put the Zend library inside the include path or you can add a new include path as shown below
+	3. Need to put the Zend library inside the include path or you can add a new include path as shown below:
 		
 		RewriteEngine on  
 		RewriteCond %{REQUEST_FILENAME} !-f  
