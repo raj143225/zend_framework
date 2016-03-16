@@ -10,6 +10,5 @@
 
 **Installation**: ~$ sudo pear install PHP_CodeSniffer
 
-**Configuration with IDE**:-
-![](/images/logo.png)
+![**Configuration with IDE**:-](/images/logo.png)
 
