@@ -32,7 +32,7 @@ where user is the singular of users **table name** and **id** is the reference c
 - Should be choosen smartly.
 - Choose datatype as timestamp instead of datetime (if allowed) as datetime takes 4 bytes where as timestamp is only 2 bytes.
 - Using tiny int instead of enum (in fileds like status or user types) as tiny int takes only one byte where as enum one or two bytes based on the options (Please do not forget to add proper comment)
--  Look into datatypes properly before choosing for the field like **TINYINT, SMALLINT, MEDIUMINT** and **INT** which take 1, 2, 3 and 4 bytes respectively.
+-  Look into datatypes properly before choosing for the field like **TINYINT, SMALLINT, MEDIUMINT** and *INT* which take 1, 2, 3 and 4 bytes respectively.
 
 **Field Size:**
 - Choose appopriate Field Size for columns.  
