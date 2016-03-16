@@ -10,13 +10,13 @@
 	2. Set the environment(Development | Testing | Production)
 	3. Need to put the Zend library inside the include path or you can add a new include path as shown below
 
-		php_value upload_max_filesize 100M
-		php_value post_max_size 100M
+		php_value upload_max_filesize 100M  
+		php_value post_max_size 100M  
 	
-		RewriteEngine on
-		RewriteCond %{REQUEST_FILENAME} !-f
-		RewriteCond %{REQUEST_FILENAME} !-d
-		RewriteRule !\.(js|ico|gif|jpg|jpeg|png|css|woff|eot|svg|ttf)$ /index.php
+		RewriteEngine on  
+		RewriteCond %{REQUEST_FILENAME} !-f  
+		RewriteCond %{REQUEST_FILENAME} !-d  
+		RewriteRule !\.(js|ico|gif|jpg|jpeg|png|css|woff|eot|svg|ttf)$ /index.php  
 		ErrorDocument 404 /system/resource/error
 
     SetEnv ENVIRONMENT [Environment]  
