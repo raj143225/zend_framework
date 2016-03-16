@@ -19,7 +19,7 @@
 		RewriteRule !\.(js|ico|gif|jpg|jpeg|png|css|woff|eot|svg|ttf)$ /index.php
 		ErrorDocument 404 /system/resource/error
 
-    SetEnv ENVIRONMENT [Environment]
+    SetEnv ENVIRONMENT [Environment]  
     php_value include_path ".;C:/xampp/php/zendframework/1.12.0;C:/xampp/php/PEAR"
 
 
