@@ -1,7 +1,7 @@
 ##File Storage:
 
 * An extra volume added to store resource files.
-* Create a soft link of proper partition(for ex: /mnt/volume-1/resource_s1) into project/public
+* Create a soft link of proper partition(for ex: /mnt/volume-1/resource_s1) into project/public.
 * Create a directory "account" inside resource and grant proper permission.
 
 
