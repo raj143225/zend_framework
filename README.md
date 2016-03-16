@@ -40,7 +40,37 @@ Doc­Block Structure:
  * 
  * @return <­­ return value datatype ­­> 
  */  
-    public function doSomething($arg1, $arg2, ..) { 
-        ... 
-        return $value; 
-    } 
+public function doSomething($arg1, $arg2, ..) { 
+    ... 
+    return $value; 
+} 
+
+#Fictional Example: 
+
+/** 
+ * Method to retrieve a set of entities from the database using a search term  
+ *  
+ * Checks the database for entities which contain $searchTerm value in an 
+ * attribute called $searchField. The ordering and formatting of result is 
+ * controlled by the keys in the $params array. 
+ *  
+ * Structure of $params array: 
+ * 
+ * $params = array(  
+ *     'order'    => 'asc',   // sets ordering, expecting: "asc"/"desc" 
+ *     'orderBy'  => 'id',    // specifies entity field by which to order result 
+ *     'format'   => 'obj',   // whether to get each entity as an object or array ('arr') 
+ *     'idOnly'   => false    // whether to return the full entity data or just its id 
+ * ); 
+ *  
+ * @param string $searchTerm  Term to compare entity attributes against 
+ * @param string $searchField Name of object attribute from where to get data  
+ *                            for comparison with $searchTerm. 
+ * @param array  $params      Array to control the formatting and order of query  
+ *                            result 
+ * 
+ * @returns array List of resulting entities 
+ */  
+public function findEntities($searchTerm, $searchField, $params) { 
+...
+--------------------------------------------------------------------------------------
