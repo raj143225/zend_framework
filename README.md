@@ -4,11 +4,10 @@
 
 **OS**: Ubuntu 14.04 LTS
 
-**Plugins**:
+##Plugins:
 
-#1.CodeSniffer:
---------------
+###1.CodeSniffer:
 
 **Installation**: ~$ sudo pear install PHP_CodeSniffer
 
-#Configuration with IDE:-
+**Configuration with IDE**:-
