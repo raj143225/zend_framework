@@ -132,3 +132,70 @@ public function findEntities($searchTerm, $searchField, $params) {
    
     ... 
 ```
+This example can be extended to include number, object or classes arguments. In the cases 
+where the argument is a string representation of an object (i.e. comma separated list of integers 
+or a date string) it is preferable to use the PHP representation of those (i.e. arrays for lists and 
+DateTime objects). If nevertheless, raw strings are chosen, their format should be verified 
+before they are used to construct database queries. This ensures that data validation is 
+performed in the controlled environment of the application and no unnecessary database 
+queries are made, i.e. when the query is malformed due to invalid method arguments. 
+
+#3.Unit Testing 
+A comprehensive suite of unit tests should be created in conjunction with most application code 
+that is being written. The purpose of writing those is to provide means of automatically testing 
+the consistency of the existing application functionality and help in the process of identifying 
+bugs earlier in the development process. Having a robust set of test cases is particularly 
+important for the application model classes which handle client data and their use should help to 
+reduce the instances of data corruption as a result of faulty application code. Additionally, a 
+comprehensive and fully documented test suite is a great tool for learning how the application 
+should work (understanding its business logic) and could be particularly useful for introducing 
+new developers to the codebase. 
+ 
+For the purpose of writing the test cases the PHPUnit testing framework should be used. The 
+framework allows for the creation of test case classes that have a one­to­one correspondence 
+of the application classes under testing. Unit test classes should be created as soon as a new 
+class is added to the application (or even before if TDD is adhered to) and the tests should be 
+updated regularly to reflect any changes that could have been made to the application code. To 
+make best use of the existing test classes, the full test suite should be run before any push to or 
+pull from central repository. This should ensure that changes are always made to a fully working 
+application codebase. Particular attention to passing the tests should be given when code is 
+merged into the central codebase so that the developer can be certain that their changes have 
+not introduced problems into the application. 
+ 
+In order to make most effective use of the tests, several key points should be considered and 
+wherever possible a set of guidelines should be followed when writing test code. As the 
+application models mostly do operations with information stored in the database it is essential to 
+maintain a set of tools (scripts) that could generate from scratch a fully functioning testing 
+database that uses the latest schema and contains all necessary entities for running of the 
+tests. Any changes done to the database schema as a result of changing application 
+requirements should be reflected immediately in the test database generation tools and unit 
+testing code so that the testing suite is kept up to date. Reliance on a specific database state 
+could be decreased by making use of temporarily added database entities which can be created 
+and destroyed using the PHPUnit setUp() and tearDown() methods respectively. 
+ 
+#Unit test guidelines: 
+* Running the full unit test suite should leave the database unchanged. No extra temp 
+entities should remain and no entities should be missing or be modified (as a result of 
+delete or update/edit). It should be possible to run the full suite N number of times and 
+get identical results each time. 
+* Test methods (cases) which use any non­trivial implementation should be annotated 
+using inline comments. 
+* All test cases should contain appropriately formatted doc­block headers which can also 
+contain detailed description of the method implementation or any notes that should be 
+kept in mind by other developers. 
+* Test cases should test several aspects of the method behaviour and not only consider 
+the simplest test that would ensure full coverage. Suitable examples of tests that could 
+be made to the methods are: 
+ 
+     * test results on invalid input (malformed or with missing entities) 
+     * test results on non existent input (empty result or exception) 
+     * test results on valid input 
+     * force exceptions wherever possible 
+     * Whenever possible a code coverage of at least 85% percent should be aimed for. 
+ 
+For examples of how to implement testing code that adheres to these guidelines and 
+recommendations, developers could refer to the **RapidFunnel_Model_AccountUserTest** class 
+which is part of the test suite on the development branch of the code repository for the 
+application. 
+
+
