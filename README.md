@@ -40,10 +40,10 @@ Doc­Block Structure:
  * @param <datatype> $varname <­­ contextual meaning of argument here ­­> 
  * 
  * @return <­­ return value datatype ­­>   
-*/  
-public function doSomething($arg1, $arg2, ..) {   
-    ...   
-    return $value;  
+*/
+public function doSomething($arg1, $arg2, ..) {
+    ...
+    return $value;
 } 
 ```
 #Fictional Example: 
@@ -70,7 +70,7 @@ public function doSomething($arg1, $arg2, ..) {
  * @param array  $params      Array to control the formatting and order of query  
  *                            result 
  * 
- * @returns array List of resulting entities  
- */  
-public function findEntities($searchTerm, $searchField, $params) {   
+ * @returns array List of resulting entities
+ */
+public function findEntities($searchTerm, $searchField, $params) {
 ```
