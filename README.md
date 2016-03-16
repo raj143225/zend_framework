@@ -8,7 +8,7 @@
 
 ####1.CodeSniffer:
 
- **Install CodeSniffer**: ~$ sudo pear install PHP_CodeSniffer  
+ **Install CodeSniffer**:&nbsp&nbsp&nbsp ~$ sudo pear install PHP_CodeSniffer  
   **Configuration with IDE**:  
   ![](/images/logo.png)  
   **Inspection configuration in IDE**:  
@@ -20,5 +20,5 @@
   
 ####2.Mess Detector:
 
-  **Install mess detector**:http://phpmd.org/download/index.html  
+  **Install mess detector**:&nbsp&nbsp&nbsphttp://phpmd.org/download/index.html  
   **Configure with IDE**:
