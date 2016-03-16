@@ -69,6 +69,6 @@ public function doSomething($arg1, $arg2, ..) {
  * @param array  $params      Array to control the formatting and order of query  
  *                            result 
  * 
- * @returns array List of resulting entities 
+ * @returns array List of resulting entities  
  */  
 public function findEntities($searchTerm, $searchField, $params) {   
