@@ -11,6 +11,5 @@
 **Installation**: ~$ sudo pear install PHP_CodeSniffer
 
 **Configuration with IDE**:-
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
+!(/images/logo.png)
 
