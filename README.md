@@ -1,29 +1,27 @@
-# Server Setup Architecture:
+Roles
+-----------
+in database admin => in system application admin (AA)
+in database support-admin => in system support admin (SA)
+in database account-admin => in system account admin (Admin)
 
-* Please check the software versions to check the softwares required for the application.
-* Application needs to be set up using the virtual host.
-* In virtual host setting the server needs to point to the index file under the "public" directory
-* Following code needs to be in the virtual setting,
-	1. For allowing few files access directly
-	2. Set the environment(Development | Testing | Production)
-	3. Need to put the Zend library inside the include path or you can add a new include path as shown below:
-		
-		RewriteEngine on  
-		RewriteCond %{REQUEST_FILENAME} !-f  
-		RewriteCond %{REQUEST_FILENAME} !-d  
-		RewriteRule !\.(js|ico|gif|jpg|png|css|woff|eot|svg|ttf)$ /index.php  
+CRON setup guide
+-----------------
+Cron files are inside public/cron directory
+"cronConfig.php" is the cron configuration file. DON'T set this as cron.
+In "cronConfig.php" line 3-4 set the include path to have zend library.
 
-    SetEnv ENVIRONMENT [Environment]  
-    **php_value include_path** ".;C:/xampp/php/zendframework/1.12.0;C:/xampp/php/PEAR"
-	   
+In "lib/RapidFunnel/Config/app.ini" set timezone according to environment.
+For Ex: set timezone for
+QA server inside the block "[QA-account-payment : QA]" ,
+Staging server inside the block "[Staging-account-payment : Staging]" , so on..
 
- 
-##Software Versions:
-* PHP 5.4
-* Mysql 5.6
-* Zend Framework 1.12
+Now need to set with environment like
+"php public/cron/accountPayment.php QA"
 
- 
-##PM System Used:
-* [JIRA] (https://rapidfunnel.atlassian.net)
-* [GIT] (https://bitbucket.org/rapidfunnel/web-application)
+CRON Account Incentive:
+========================
+@description: It is to calculate the incentives for the account users based on the opt in contact(leads) generated
+It should run on start of every day. Hence it will calculate the incentives of users of the previous days,
+if the "leadsGenerated" column of the "account incentive" table is not updated.
+To Run Use:
+php PATH-TO-PROJECT-FOLDER/public/cron/accountIncentive.php ENVIRONMENT
