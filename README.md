@@ -1,6 +1,5 @@
-#RapidFunnel Coding
-#Specification Update
+#RapidFunnel Coding Specification Update
 
-                                            Documenting using PHP doc-blocks  
-                                            Validation of method arguments  
-                                            Unit Testing  
+Documenting using PHP doc-blocks  
+Validation of method arguments  
+Unit Testing  
