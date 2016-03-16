@@ -1,37 +1,24 @@
-#Tools and Plugins for Development
+##Roles
+in database admin => in system application admin (AA)  
+in database support-admin => in system support admin (SA)  
+in database account-admin => in system account admin (Admin)  
 
-**IDE**: PhpStorm 10.0.1
+##CRON setup guide
+Cron files are inside public/cron directory  
+"cronConfig.php" is the cron configuration file. DON'T set this as cron.  
+In "cronConfig.php" line 3-4 set the include path to have zend library.  
 
-**OS**: Ubuntu 14.04 LTS
+In "lib/RapidFunnel/Config/app.ini" set timezone according to environment.  
+For Ex: set timezone for  
+QA server inside the block "[QA-account-payment : QA]" ,  
+Staging server inside the block "[Staging-account-payment : Staging]" , so on..  
 
-##Plugins:
+Now need to set with environment like  
+"php public/cron/accountPayment.php QA"  
 
-####1.CodeSniffer:
-
- **Install CodeSniffer**:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~$ sudo pear install PHP_CodeSniffer  
- 
-  **Configuration with IDE**:  
-  ![](/images/logo.png)  
-  **Inspection configuration in IDE**:
-  
-  ![](/images/logo.png)
-  
-  **Ex**:  
-  **How it shows warning during development**:  
-  ![](/images/logo.png)
-  
-####2.MessDetector:
-
-  **Install MessDetector**:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://phpmd.org/download/index.html  
-  
-  **Configure with IDE**:  
-  ![](/images/logo.png)  
-  
-  **Inspection configuration in IDE**:  
-  ![](/images/logo.png)
-  
-  **Ex**:  
-  **How it shows warning during development**:  
-  ![](/images/logo.png)
-  
-  **Installation and configuration**:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://www.jetbrains.com/phpstorm/help/configuring-xdebug.html
+##CRON Account Incentive:
+@description: It is to calculate the incentives for the account users based on the opt in contact(leads) generated  
+It should run on start of every day. Hence it will calculate the incentives of users of the previous days,  
+if the "leadsGenerated" column of the "account incentive" table is not updated.  
+To Run Use:  
+php PATH-TO-PROJECT-FOLDER/public/cron/accountIncentive.php ENVIRONMENT
