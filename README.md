@@ -1,9 +1,9 @@
 #Developer Environment Setup:
 
-##Project SetUP
+##Project SetUP:
 ---------------------------
 - Please check the software versions from (General-Information.txt) to check the softwares required for the application.
-- Code can be pulled from  GIT (https://bitbucket.org/rapidfunnel/web-application)
+- Code can be pulled from [GIT](https://bitbucket.org/rapidfunnel/web-application)
 - Application needs to be set up using the virtual host.
 - In virtual host setting the server needs to point to the index file under the "public" directory
 - Following code needs to be in the virtual setting,
@@ -24,18 +24,18 @@
     php_value include_path ".;C:/xampp/php/zendframework/1.12.0;C:/xampp/php/PEAR"
 
 
-##Database SetUP
+##Database SetUP:
 ---------------------------
 - Please get the DB files from the location <ProjectDirectoryName>/sql/ and create DB
 
 
-##Config Modification
+##Config Modification:
 ---------------------------
 - Modify data in the config files under <ProjectDirectoryName>/lib/RapidFunnel/Config/ based on your environment.
 - Also check the commonCofig.ini for common config settings under above mentioned location.
 
 
-##External Libraries
+##External Libraries:
 ---------------------------
 - Need few external libraries, as mentioned below with their version
 - Then libraries of specific version can be downloaded using composer in <ProjectDirectoryName>/lib/composer.json
@@ -45,7 +45,7 @@
 3. "authorizenet/authorizenet": "1.8.0"
 
 
-##phpUnit For Testing
+##phpUnit For Testing:
 ---------------------------
 - Needs to install phpUnit / there also exists the phpunit.php file under <ProjectDirectoryName>/tests/
 - Few constants for phpUnit testing needs to be modified in <ProjectDirectoryName>/tests/app/bootstrap.php
