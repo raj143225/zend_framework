@@ -7,5 +7,5 @@
 
 ##Server Setting:
 
-  *Need to remove rewrite rule from virtualhost setup file (/etc/apache2/sites-enabled/...) and put it in .htaccess file with proper entries.  
+  *Need to remove rewrite rule from virtualhost setup file (/etc/apache2/sites-enabled/...) and put it in .htaccess file.
   *Note that .htaccess is already added in the server.
