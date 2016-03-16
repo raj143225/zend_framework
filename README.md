@@ -7,7 +7,14 @@
 	1. For allowing few files access directly
 	2. Set the environment(Development | Testing | Production)
 	3. Need to put the Zend library inside the include path or you can add a new include path as shown below
+		
+		RewriteEngine on  
+		RewriteCond %{REQUEST_FILENAME} !-f  
+		RewriteCond %{REQUEST_FILENAME} !-d  
+		RewriteRule !\.(js|ico|gif|jpg|png|css|woff|eot|svg|ttf)$ /index.php  
 
+    SetEnv ENVIRONMENT [Environment]  
+    **php_value include_path** ".;C:/xampp/php/zendframework/1.12.0;C:/xampp/php/PEAR"
 	   
 
  
