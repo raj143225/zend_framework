@@ -27,7 +27,7 @@ method in question.
 **Reference:**
 http://www.phpdoc.org/docs/latest/references/phpdoc/index.html 
 
-Doc­Block Structure: 
+Doc­Block Structure:   
 /** 
  * <­­ one line description of method goes here ­­> 
  *  
@@ -40,7 +40,7 @@ Doc­Block Structure:
  * 
  * @return <­­ return value datatype ­­> 
  */ 
-public function doSomething($arg1, $arg2, ..) { 
-    ... 
-    return $value; 
-} 
+    public function doSomething($arg1, $arg2, ..) { 
+        ... 
+        return $value; 
+    } 
