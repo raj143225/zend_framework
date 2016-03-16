@@ -28,6 +28,7 @@ method in question.
 http://www.phpdoc.org/docs/latest/references/phpdoc/index.html 
 
 Doc­Block Structure:   
+```php
 /** 
  * <­­ one line description of method goes here ­­> 
  *  
@@ -44,9 +45,9 @@ public function doSomething($arg1, $arg2, ..) {
     ...   
     return $value;  
 } 
-
+```
 #Fictional Example: 
-
+```php
 /** 
  * Method to retrieve a set of entities from the database using a search term  
  *  
@@ -72,3 +73,4 @@ public function doSomething($arg1, $arg2, ..) {
  * @returns array List of resulting entities  
  */  
 public function findEntities($searchTerm, $searchField, $params) {   
+```
