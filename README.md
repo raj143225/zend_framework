@@ -17,12 +17,12 @@
     **php_value include_path** ".;C:/xampp/php/zendframework/1.12.0;C:/xampp/php/PEAR"
 
  
- ##Software Versions:
+##Software Versions:
 	* PHP 5.4
 	* Mysql 5.6
 	* Zend Framework 1.12
 
  
- ##PM System Used:
-* [JIRA] (https://rapidfunnel.atlassian.net)
-* [GIT] (https://bitbucket.org/rapidfunnel/web-application)
+##PM System Used:
+	* [JIRA] (https://rapidfunnel.atlassian.net)
+	* [GIT] (https://bitbucket.org/rapidfunnel/web-application)
