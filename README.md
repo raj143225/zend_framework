@@ -22,7 +22,7 @@
 
   **Install MessDetector**:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://phpmd.org/download/index.html  
   **Configure with IDE**:  
-  ![](/images/logo.png)
+  ![](/images/logo.png)  
 **Inspection configuration in IDE**:  
   ![](/images/logo.png)
   
