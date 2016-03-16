@@ -42,6 +42,6 @@
 
 
 ##PHPUnit For Testing:
-* Needs to install PHPUnit / there also exists the phpunit.php file under <ProjectDirectoryName>/tests/
+* Needs to install phpunit / there also exists the phpunit.php file under <ProjectDirectoryName>/tests/
 * Few constants for phpUnit testing needs to be modified in <ProjectDirectoryName>/tests/app/bootstrap.php
 * Xdebug needs to be installed for Unix systems or Xdebug module can be enabled in windows systems to make unit testing functional.
