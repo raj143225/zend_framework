@@ -6,7 +6,7 @@
 
 ##Plugins:
 
-####1.CodeSniffer:
+###1.CodeSniffer:
 
  **Install CodeSniffer**:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~$ sudo pear install PHP_CodeSniffer  
  
@@ -20,7 +20,7 @@
   **How it shows warning during development**:  
   ![](/img/CSErrorDisplay.png)
   
-####2.MessDetector:
+###2.MessDetector:
 
   **Install MessDetector**:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://phpmd.org/download/index.html  
   
