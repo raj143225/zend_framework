@@ -23,7 +23,7 @@ e.g for "user id" name should be **userId**
 **Foreign Keys:**
 - If  a table has a foreign key column of another table then the column will be like
 **userId**
-where user is the singular of users **table name** and **id** is the reference column name in users table.
+where user is the singular of users (table name) and **id** is the reference column name in users table.
 
 **Collation:**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**utf8_general_ci** for all char, varchar or text fields.
@@ -32,11 +32,11 @@ where user is the singular of users **table name** and **id** is the reference c
 - Should be choosen smartly.
 - Choose datatype as timestamp instead of datetime (if allowed) as datetime takes 4 bytes where as timestamp is only 2 bytes.
 - Using tiny int instead of enum (in fileds like status or user types) as tiny int takes only one byte where as enum one or two bytes based on the options (Please do not forget to add proper comment)
--  Look into datatypes properly before choosing for the field like **TINYINT, SMALLINT, MEDIUMINT** and *INT* which take 1, 2, 3 and 4 bytes respectively.
+-  Look into datatypes properly before choosing for the field like **TINYINT, SMALLINT, MEDIUMINT** and **INT** which take 1, 2, 3 and 4 bytes respectively.
 
 **Field Size:**
 - Choose appopriate Field Size for columns.  
-Like a name should not be VARCHAR(255), as in real a name won't be 255 characters long.
+Like a name should not be **VARCHAR(255)**, as in real a name won't be 255 characters long.
 
 **Points to Takecare:**
 - Avoid allowing Null in fields if possible.
