@@ -41,7 +41,7 @@
 * Then libraries of specific version can be downloaded using composer in <ProjectDirectoryName>/lib/composer.json
 * Following libraries have been used
 	1. "mailgun/mailgun-php": **~1.7.1**,
-	2. "ext-curl": *****,
+	2. "ext-curl": '*',
 	3. "authorizenet/authorizenet": **1.8.0**
 
 
